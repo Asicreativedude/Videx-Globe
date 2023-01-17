@@ -21,8 +21,7 @@ const color = 0x191919; // white
 const near = 0.1;
 const far = 4;
 // scene.fog = new THREE.Fog(color, near, far);
-// scene.background = new THREE.Color(color);
-
+scene.background = null;
 /**
  * Textures
  */
@@ -34,7 +33,7 @@ const far = 4;
 // });
 
 const globeTexture = new THREE.TextureLoader().load(
-	'https://github.com/Asicreativedude/Videx-Globe/blob/9c8de3dd10fc703e53fca2efd9780d068a7ac836/dist/earth.jpg'
+	'https://uploads-ssl.webflow.com/628be43857417b0d036b27dc/63c6797d46467cf5310771ff_earth.webp'
 );
 globeTexture.wrapS = THREE.RepeatWrapping;
 globeTexture.wrapT = THREE.RepeatWrapping;
@@ -101,7 +100,7 @@ countires.forEach((element) => {
 	// 	})
 	// );
 	fontLoader.load(
-		'https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdA.woff2',
+		'https://uploads-ssl.webflow.com/628be43857417b0d036b27dc/63c6825ed9f5ecbafb9de702_Exo_Bold.json.txt',
 		// '/fonts/gentilis_regular.typeface.json',
 		// '/fonts/optimer_regular.typeface.json',
 		(font) => {
@@ -175,14 +174,17 @@ const camera = new THREE.PerspectiveCamera(
 
 camera.position.set(0, 0, 1.8);
 scene.add(camera);
+
 if (sizes.width < sizes.height) {
 	camera.position.set(0, 0, 2.8);
 }
 // Controls
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
-// controls.enableZoom = false;
+controls.enableZoom = false;
 controls.enablePan = false;
+globe.rotation.set(0.7, -0.4, 0);
+pins.rotation.set(0.7, -0.4, 0);
 /**
  * Renderer
  */
