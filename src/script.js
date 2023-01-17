@@ -12,7 +12,7 @@ const gui = new dat.GUI();
 // gui.close();
 gui.hide();
 // Canvas
-const canvas = document.querySelector('canvas.webgl');
+const canvas = document.querySelector('canvas.webgl-globe');
 
 // Scene
 const scene = new THREE.Scene();
