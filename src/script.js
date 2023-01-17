@@ -1,5 +1,5 @@
-import './style.css';
-import * as THREE from 'three';
+// import './style.css';
+// import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as dat from 'dat.gui';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
@@ -33,7 +33,9 @@ const far = 4;
 // 	color: 0xf9f9f9,
 // });
 
-const globeTexture = new THREE.TextureLoader().load('/earth.jpg');
+const globeTexture = new THREE.TextureLoader().load(
+	'https://github.com/Asicreativedude/Videx-Globe/blob/9c8de3dd10fc703e53fca2efd9780d068a7ac836/dist/earth.jpg'
+);
 globeTexture.wrapS = THREE.RepeatWrapping;
 globeTexture.wrapT = THREE.RepeatWrapping;
 globeTexture.offset.x = 1.5708 / (2 * Math.PI);
