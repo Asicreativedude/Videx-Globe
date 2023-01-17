@@ -1,5 +1,5 @@
 // import './style.css';
-// import * as THREE from 'three';
+import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import * as dat from 'dat.gui';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
@@ -43,7 +43,7 @@ let globeMaterial = new THREE.MeshStandardMaterial({
 	map: globeTexture,
 	color: 0x191919,
 });
-const markerTexture = new THREE.TextureLoader().load('/Marker.svg');
+// const markerTexture = new THREE.TextureLoader().load('/Marker.svg');
 
 // const directLight = new THREE.DirectionalLight(0xffffff, 5);
 const ambient = new THREE.AmbientLight('#ffffff', 5);
@@ -101,7 +101,7 @@ countires.forEach((element) => {
 	// 	})
 	// );
 	fontLoader.load(
-		'/helvetiker_bold.typeface.json',
+		'https://fonts.gstatic.com/s/ibmplexsans/v14/zYX9KVElMYYaJe8bpLHnCwDKjSL9AIFsdA.woff2',
 		// '/fonts/gentilis_regular.typeface.json',
 		// '/fonts/optimer_regular.typeface.json',
 		(font) => {
